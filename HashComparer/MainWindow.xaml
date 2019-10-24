@@ -1,0 +1,34 @@
+﻿<Window x:Class="HashComparer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HashComparer"
+        mc:Ignorable="d"
+        Title="HashComparer" MinWidth="300" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lbl_File" Content="File:"/>
+        <TextBox x:Name="tb_File" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" IsReadOnly="True" TextChanged="tb_File_TextChanged"/>
+        <Button x:Name="btn_Browse"  Content="Browse..." Grid.Column="3" Margin="5" Click="btn_Browse_Click"/>
+        <Label x:Name="lbl_Hash1" Content="File Hash:" Grid.Row="1"/>
+        <TextBox x:Name="tb_Hash1"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" IsReadOnly="True"/>
+        <Label x:Name="lbl_Hash2" Content="Provided Hash:" Grid.Row="2"/>
+        <TextBox x:Name="tb_Hash2" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="5"/>
+        <Label x:Name="lbl_HashAlgo" Content="Hash Algorithm:" Grid.Row="3"/>
+        <ComboBox x:Name="cbb_HashAlgo" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" SelectionChanged="cbb_HashAlgo_SelectionChanged"/>
+        <Button x:Name="btn_Compare" Content="Compare!" Grid.Row="4" Grid.ColumnSpan="4" Margin="5" Click="btn_Compare_Click"/>
+    </Grid>
+</Window>
